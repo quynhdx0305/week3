@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ctl_Group"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="150dp"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imgShare"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spark_button_like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spark_button_like"
+        app:srcCompat="@drawable/ic_share_black_24dp" />
+
+    <ImageView
+        android:id="@+id/imgTweet"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgComment"
+        app:layout_constraintEnd_toStartOf="@+id/spark_button_like"
+        app:layout_constraintTop_toTopOf="@+id/imgComment"
+        app:srcCompat="@drawable/ic_cached_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtNameClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Name Client"
+        android:textStyle="bold"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatarClient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtIDClient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ID Client"
+        android:textColor="@color/tw__composer_blue"
+        app:layout_constraintStart_toEndOf="@+id/txtNameClient"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtStatusClien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:autoLink="all"
+        android:textColorLink="@color/tw__composer_blue"
+        android:text="Muốn nói với em bao điều rằng tôi đã thương em nhiều "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatarClient"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameClient" />
+
+    <ImageView
+        android:id="@+id/imgAvatarClient"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="TODO"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/imgHinhClient"
+        android:layout_width="0dp"
+        android:layout_height="154dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/txtStatusClien"
+        app:riv_corner_radius="10dip"
+        app:srcCompat="@drawable/tw__btn_composer_tweet"
+        tools:src="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/imgComment"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgTweet"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imgHinhClient"
+        app:srcCompat="@drawable/ic_chat_bubble_outline_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtCountComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="75"
+        app:layout_constraintBottom_toBottomOf="@+id/imgComment"
+        app:layout_constraintStart_toEndOf="@+id/imgComment" />
+
+    <TextView
+        android:id="@+id/txtCountTweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/imgTweet"
+        app:layout_constraintStart_toEndOf="@+id/imgTweet" />
+
+    <TextView
+        android:id="@+id/txtCountLike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="16dp"
+        android:text="x"
+        app:layout_constraintBottom_toBottomOf="@+id/spark_button_like"
+        app:layout_constraintStart_toStartOf="@+id/spark_button_like" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="72dp" />
+
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/spark_button_like"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="66dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgTweet"
+        app:layout_constraintEnd_toStartOf="@+id/imgShare"
+        app:layout_constraintTop_toTopOf="@+id/imgTweet"
+        app:sparkbutton_activeImage="@drawable/ic_likeheart"
+        app:sparkbutton_iconSize="16dp"
+        app:sparkbutton_inActiveImage="@drawable/ic_heart"
+        app:sparkbutton_primaryColor="@color/primary_color"
+        app:sparkbutton_secondaryColor="@color/secondary_color" />
+
+    <TextView
+        android:id="@+id/txtTimeAgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text=".Iime ago"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

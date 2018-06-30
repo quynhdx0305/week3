@@ -1,0 +1,49 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    // Define versions in a single place
+    ext {
+        // Sdk and tools
+        compileSdkVersion = 27
+        minSdkVersion = 19
+        targetSdkVersion = 27
+
+        // App dependencies
+        constraintLayoutVersion = '1.1.0'
+        dataBindingVersion = '3.0.1'
+        espressoVersion = '3.0.1'
+        glideVersion = '4.4.0'
+        gradleVersion = '3.2.0-alpha16'
+        gsonVersion = '2.8.2'
+        junitVersion = '4.12'
+        lifecycleVersion = '1.1.1'
+        navigationVersion = '1.0.0-alpha01'
+        kotlinVersion = '1.2.41'
+        ktxVersion = '0.3'
+        roomVersion = '1.1.0'
+        runnerVersion = '1.0.1'
+        supportLibraryVersion = '27.1.1'
+        workVersion = '1.0.0-alpha02'
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.0-beta01'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+    allprojects {
+        repositories {
+            google()
+            jcenter()
+            maven { url "https://jitpack.io" }
+        }
+    }
+
+    task clean(type: Delete) {
+        delete rootProject.buildDir
+    }
