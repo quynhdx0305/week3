@@ -36,7 +36,7 @@ import static com.bumptech.glide.request.RequestOptions.fitCenterTransform;
 public class TimelineActivity extends AppCompatActivity implements TimelineContract.View {
     private static String TAG = TimelineActivity.class.getSimpleName();
     RecyclerView rvTimeline;
-    ProgressBar loader;
+    //ProgressBar loader;
     FloatingActionButton fab;
     TimelineContract.Presenter presenter;
     StatusAdapter statusAdapter;
@@ -147,7 +147,7 @@ public class TimelineActivity extends AppCompatActivity implements TimelineContr
             }
         });
         //Blur
-        builder.setOnCancelListener(dialogInterface -> Blurry.delete((ConstraintLayout)findViewById(R.id.ctl_timeline)));
+        builder.setOnCancelListener(dialogInterface -> Blurry.delete(findViewById(R.id.ctl_timeline)));
         Blurry.with(TimelineActivity.this)
                 .radius(25)
                 .sampling(2)

@@ -90,10 +90,9 @@ public class StatusAdapter extends RecyclerView.Adapter<StatusAdapter.ViewHolder
             mView.showDialogTweet();
         });
         holder.imgShare.setOnClickListener(view -> mView.showDialogShare());
-        //Show image hinh Client full screen............................... fix detail
+        //Show image hinh Client full screen...............................
         holder.imgHinhClient.setOnClickListener(view -> mView.showDialogHinhClient(dataX.entities.media.get(0).mediaUrl) );
     }
-
 
     @Override
     public int getItemCount() {
